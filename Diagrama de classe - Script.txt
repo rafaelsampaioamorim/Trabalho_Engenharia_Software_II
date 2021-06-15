@@ -1,0 +1,25 @@
+[Funcionario| Tipo: String; Nome: String; ]
+[Funcionario]1->1[Login]
+
+[Login| User: String; Password: String | ValidarLogin(User,Password): Boolean]
+
+[Fornecedor]1<->...[Produto]
+[Produto| Cod_prod: int; Nome: String; ValorUnid: double]
+
+[Produto]1->...[Estoque]
+[Estoque|Cod_prod:int;QntMinima:int|QuantidadeEmEstoque();DeduzirEstoque()]
+
+[Fornecedor| Cod: long; razao: String; fantasia: String; endereco: String; telefone: String]
+
+[Venda| CodOS:int; TipoOS:int| GerarNF()]
+
+[Cliente| Cod: long; Nome: String; Telefone: String; Endereço: String]
+
+[Funcionario]->[Venda]
+[Cliente]->[Venda]
+[Venda]->[Produto]
+
+[Relatorios| |BuscarEstoque(); Vendas()]
+[Funcionario]1->1[Relatorios]
+[Relatorios]1->...[Estoque]
+[Relatorios]1->...[Venda]
