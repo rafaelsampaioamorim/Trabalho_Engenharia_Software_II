@@ -1,0 +1,16 @@
+Caso de USO GESTÂO
+[Gerente]-(Gestão de Funcionario)
+[Gerente]-(Gestão de Fornecedores)
+[Gerente]-(Gestão de Produtos)
+[Operador]-(Gestão de Produtos)
+
+Caso de Uso Venda
+[Operador]-(Realizar Venda)
+(Realizar Venda)>(Emitir NF)
+[Operador]-(Cancelar Venda)
+[Cliente]-(Realizar Venda)
+
+Caso de Uso Serviço
+[Laboratorista]-(Gestão Ordem de Serviço)
+[Operador]-(Gestão Ordem de Serviço)
+[Cliente]-(Gestão Ordem de Serviço)
