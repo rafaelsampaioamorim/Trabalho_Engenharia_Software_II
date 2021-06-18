@@ -34,6 +34,8 @@ public class Principal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btnIniciarVenda = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        btnRelatorios = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestão de Vendas");
@@ -74,40 +76,56 @@ public class Principal extends javax.swing.JFrame {
         jLabel3.setText("Gestão de Clientes");
 
         btnIniciarVenda.setIcon(new javax.swing.ImageIcon("F:\\Fatec\\Terceiro Semestre\\Engenharia de Software II\\Trabalho_Engenharia_Software_II\\Gestao_de_Vendas\\Venda.png")); // NOI18N
+        btnIniciarVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIniciarVendaActionPerformed(evt);
+            }
+        });
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setText("Iniciar Venda");
+
+        btnRelatorios.setIcon(new javax.swing.ImageIcon("F:\\Fatec\\Terceiro Semestre\\Engenharia de Software II\\Trabalho_Engenharia_Software_II\\Gestao_de_Vendas\\relatorio.png")); // NOI18N
+
+        jLabel5.setText("Relatórios");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(87, 87, 87)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(btnFornecedores)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(61, 61, 61)
-                                .addComponent(jLabel2)
-                                .addGap(127, 127, 127)
-                                .addComponent(jLabel3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnFuncionarios, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
+                        .addGap(57, 57, 57)
                         .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(173, 173, 173)
-                        .addComponent(btnIniciarVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(322, 322, 322)
-                        .addComponent(jLabel4)))
-                .addGap(43, 43, 43))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(155, 155, 155)
+                                    .addComponent(jLabel4))
+                                .addComponent(btnIniciarVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(btnRelatorios, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addComponent(jLabel5)
+                                    .addGap(41, 41, 41))))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(btnFornecedores)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(61, 61, 61)
+                                    .addComponent(jLabel2)
+                                    .addGap(127, 127, 127)
+                                    .addComponent(jLabel3))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(btnFuncionarios, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(107, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,11 +141,15 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addGap(28, 28, 28)
-                .addComponent(btnIniciarVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnIniciarVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRelatorios))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -135,16 +157,23 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionariosActionPerformed
         // TODO add your handling code here:
+        new FrameFuncionarios().setVisible(true);
     }//GEN-LAST:event_btnFuncionariosActionPerformed
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
         // TODO add your handling code here:
+        new FrameClientes().setVisible(true);
     }//GEN-LAST:event_btnClientesActionPerformed
 
     private void btnFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFornecedoresActionPerformed
         // TODO add your handling code here:
         new Fornecedores().setVisible(true);
     }//GEN-LAST:event_btnFornecedoresActionPerformed
+
+    private void btnIniciarVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarVendaActionPerformed
+        // TODO add your handling code here:
+        new FrameVenda().setVisible(true);
+    }//GEN-LAST:event_btnIniciarVendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -186,9 +215,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton btnFornecedores;
     private javax.swing.JButton btnFuncionarios;
     private javax.swing.JButton btnIniciarVenda;
+    private javax.swing.JButton btnRelatorios;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
 }
